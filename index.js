@@ -27,24 +27,24 @@ document.addEventListener('DOMContentLoaded', function () {
       // 🚨 Generate certificate content dynamically
       // const certHeading = document.createElement('h1');
       // certHeading.textContent = 'Certificate of Achievement';
-      certificateContent.textContent = `
+      certificateContent.innerHTML = `
       <h1>Certificate of Achievement</h1>
       <p>This is to certify that</p>
       <h3>${studentName}</h3>
       <p>has almost completed the</p>
       <h3>${courseName}</h3>
       <p>with legendary perseverance and world-class bad-assery for never giving up 🏆</p>
-      <img src ="/logo.png">
+    
       <p>${personalMessage}</p>
       `;
-    
+      
       //  Display the modal
       modal.style.display = 'block';
   
       // Clear the form inputs
-      // studentNameInput.value = '';
-      // personalMessageInput.value = '';
-      // if(courseNameInput) courseNameInput.value = '';
+      studentNameInput.value = '';
+      personalMessageInput.value = '';
+      courseNameInput.value = '';
     });
   
     //  🚨 Close the modal when the close button is clicked
