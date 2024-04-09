@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
     // Hide the modal initially
     modal.style.display = 'none';
+    cardForm.style.display = 'block';
   
     cardForm.addEventListener('submit', function (e) {
       e.preventDefault(); // prevents form from submiting before info is filled
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const personalMessageInput = document.getElementById('personalMessage');
       const courseNameInput = document.getElementById('courseName'); 
   
-      const studentName = studentNameInput.value;
+      const studentName = studentNameInput.value; 
       const personalMessage = personalMessageInput.value;
       const courseName = courseNameInput ? courseNameInput.value : "a course"; // Fallback to "a course" if no input
   
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
       
       //  Display the modal
       modal.style.display = 'block';
+      cardForm.style.display = 'none';
   
       // Clear the form inputs
       studentNameInput.value = '';
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     //  🚨 Close the modal when the close button is clicked
     closeModal.addEventListener('click', function () {
       modal.style.display = 'none';
+      cardForm.style.display = 'block';
     });
   });
   
